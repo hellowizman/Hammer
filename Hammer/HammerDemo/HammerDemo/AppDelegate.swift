@@ -47,12 +47,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window!.rootViewController = UINavigationController().hmr.use(closure: { (navigationController) in
             navigationController.viewControllers = [
-                MainViewController(nibName: MainViewController.hmr.shortName, bundle: nil)
+                MainViewController(nibName: MainViewController.hmr.shortName, bundle: nil).hmr.use(closure: { (viewController) in
+                    viewController.loadView()
+                    viewController.model = "Main Screen"
+                }).object
             ]
         }).object
         
         // Return result
-        
+        UILabel().hmr.use(as: UILabel.self) { (label) in
+            label.text = "This is a label"
+        }
         return true
     }
 

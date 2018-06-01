@@ -12,6 +12,8 @@
 		6907456C20C16508008C3CD2 /* NSObjectProtocolExtensionClassManagerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6907456920C16508008C3CD2 /* NSObjectProtocolExtensionClassManagerBridge.swift */; };
 		6907456E20C16626008C3CD2 /* ObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6907456D20C16626008C3CD2 /* ObjectManager.swift */; };
 		6907457020C16820008C3CD2 /* NSObjectProtocolExtensionObjectManagerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6907456F20C16820008C3CD2 /* NSObjectProtocolExtensionObjectManagerBridge.swift */; };
+		6907457920C16C0C008C3CD2 /* ModelHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6907457820C16C0C008C3CD2 /* ModelHolder.swift */; };
+		6907457B20C1711E008C3CD2 /* NullableModelHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6907457A20C1711E008C3CD2 /* NullableModelHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		6907456920C16508008C3CD2 /* NSObjectProtocolExtensionClassManagerBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtensionClassManagerBridge.swift; sourceTree = "<group>"; };
 		6907456D20C16626008C3CD2 /* ObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectManager.swift; sourceTree = "<group>"; };
 		6907456F20C16820008C3CD2 /* NSObjectProtocolExtensionObjectManagerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtensionObjectManagerBridge.swift; sourceTree = "<group>"; };
+		6907457820C16C0C008C3CD2 /* ModelHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelHolder.swift; sourceTree = "<group>"; };
+		6907457A20C1711E008C3CD2 /* NullableModelHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullableModelHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			children = (
 				6907456720C16508008C3CD2 /* Classes */,
 				6907456A20C16508008C3CD2 /* Objects */,
+				6907457120C16AF9008C3CD2 /* Patterns */,
 			);
 			name = Source;
 			path = ../../../Source;
@@ -87,6 +92,23 @@
 				6907456F20C16820008C3CD2 /* NSObjectProtocolExtensionObjectManagerBridge.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		6907457120C16AF9008C3CD2 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				6907457720C16C0C008C3CD2 /* ModelHolder */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		6907457720C16C0C008C3CD2 /* ModelHolder */ = {
+			isa = PBXGroup;
+			children = (
+				6907457820C16C0C008C3CD2 /* ModelHolder.swift */,
+				6907457A20C1711E008C3CD2 /* NullableModelHolder.swift */,
+			);
+			path = ModelHolder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +192,9 @@
 			files = (
 				6907456E20C16626008C3CD2 /* ObjectManager.swift in Sources */,
 				6907456C20C16508008C3CD2 /* NSObjectProtocolExtensionClassManagerBridge.swift in Sources */,
+				6907457B20C1711E008C3CD2 /* NullableModelHolder.swift in Sources */,
 				6907456B20C16508008C3CD2 /* ClassManager.swift in Sources */,
+				6907457920C16C0C008C3CD2 /* ModelHolder.swift in Sources */,
 				6907457020C16820008C3CD2 /* NSObjectProtocolExtensionObjectManagerBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
