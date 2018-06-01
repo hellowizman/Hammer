@@ -38,15 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Create window
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window!.backgroundColor = .white
-        self.window!.makeKeyAndVisible()
+        self.window = UIWindow(frame: UIScreen.main.bounds).hmr.use(closure: { (window) in
+            window.backgroundColor = .white
+            window.makeKeyAndVisible()
+        }).object
         
         // Display main screen
         
-        let mainViewController = MainViewController(nibName: MainViewController.hmr.shortName, bundle: nil)
-        let navigationController = UINavigationController(rootViewController: mainViewController)
-        self.window!.rootViewController = navigationController
+        self.window!.rootViewController = UINavigationController().hmr.use(closure: { (navigationController) in
+            navigationController.viewControllers = [
+                MainViewController(nibName: MainViewController.hmr.shortName, bundle: nil)
+            ]
+        }).object
         
         // Return result
         
