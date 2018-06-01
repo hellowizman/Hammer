@@ -1,5 +1,5 @@
 <p align="center" >
-	<img src="/Images/logo_2048_2048.png" alt="Hammer" title="Hammer">
+	<img src="/Images/logo_2048_2048.png" alt="Hammer" title="Hammer" width="300px" height="300px">
 </p>
 
 <p align="center">
@@ -66,4 +66,4 @@ let view = SomeView().use(as: UILabel.self) { (label) in
 
 ## License
 
-`Illumination` is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
+`Hammer` is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
