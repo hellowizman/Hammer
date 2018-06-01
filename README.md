@@ -42,8 +42,15 @@ or
 Retrieve class name:
 
 ```swift
-let classNameWithNamespace = MainViewController.hmr.fullName // "MyApplication.MainViewController"
+let classNameWithNamespace = MainViewController.hmr.fullName     // "MyApplication.MainViewController"
 let classNameWithoutNamespace = MainViewController.hmr.shortName // "MainViewController"
+```
+
+Instead of `hmr`, you can also use hammer emoji:
+
+```swift
+let classNameWithNamespace = MainViewController.🔨.fullName     // "MyApplication.MainViewController"
+let classNameWithoutNamespace = MainViewController.🔨.shortName // "MainViewController"
 ```
 
 ### Objects
@@ -59,9 +66,59 @@ let label = UILabel().hmr.use { (label) in
 Use object converted to another type in external closure:
 
 ```swift
-let view = SomeView().use(as: UILabel.self) { (label) in
+let view = SomeView().hmr.use(as: UILabel.self) { (label) in
     label.text = "This is a label"
 }.object
+```
+
+Also, you can use `🔨` as a replacement for `hmr`:
+
+```swift
+let view = SomeView().🔨.use(as: UILabel.self) { (label) in
+    label.text = "This is a label"
+}.object
+```
+
+### Patterns
+
+#### Model Holder
+
+`ModelHolder` is a protocol for implementation of `model` field inside of class:
+
+```swift
+class MainViewController: UIViewController, ModelHolder {
+
+    var model: String {
+        get {
+	    return self.titleLabel.text ?? ""
+	}
+	set {
+	    self.titleLabel.text = newValue
+	}
+    }
+
+}
+```
+
+In example above, the `model` is `String`. Actually, model can be of any type, it's up to developer which type to implement.
+
+#### Nullable Model Holder
+
+Represented by `NullableModelHolder` protocol. Actually, it's the same as `ModelHolder`, but the model is of nullable type:
+
+```swift
+class MainViewController: UIViewController, NullableModelHolder {
+
+    var model: String? {
+        get {
+	    return self.titleLabel.text
+	}
+	set {
+	    self.titleLabel.text = newValue
+	}
+    }
+
+}
 ```
 
 ## License
