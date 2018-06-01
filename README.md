@@ -64,6 +64,48 @@ let view = SomeView().use(as: UILabel.self) { (label) in
 }.object
 ```
 
+### Patterns
+
+#### Model Holder
+
+`ModelHolder` is a protocol for implementation of `model` field inside of class:
+
+```swift
+class MainViewController: UIViewController, ModelHolder {
+
+    var model: String {
+        get {
+	    return self.titleLabel.text ?? ""
+	}
+	set {
+	    self.titleLabel.text = newValue
+	}
+    }
+
+}
+```
+
+In example above, the `model` is `String`. Actually, model can be of any type, it's up to developer which type to implement.
+
+#### Nullable Model Holder
+
+Represented by `NullableModelHolder` protocol. Actually, it's the same as `ModelHolder`, but the model is of nullable type:
+
+```swift
+class MainViewController: UIViewController, NullableModelHolder {
+
+    var model: String? {
+        get {
+	    return self.titleLabel.text
+	}
+	set {
+	    self.titleLabel.text = newValue
+	}
+    }
+
+}
+```
+
 ## License
 
 `Hammer` is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
