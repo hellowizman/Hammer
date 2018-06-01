@@ -29,7 +29,7 @@ Provides developer with set of classes and extensions for making stable architec
                    DESC
 
   s.homepage     = "https://github.com/igormatyushkin014/Hammer"
-  s.screenshots  = "https://github.com/igormatyushkin014/Hammer/raw/master/Images/logo_2048_600.png"
+  s.screenshots  = "https://github.com/igormatyushkin014/Hammer/raw/master/Images/logo_2048_2048.png"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
