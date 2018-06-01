@@ -55,9 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }).object
         
         // Return result
-        UILabel().hmr.use(as: UILabel.self) { (label) in
-            label.text = "This is a label"
-        }
+        
         return true
     }
 
