@@ -10,11 +10,32 @@ import UIKit
 
 public class ClassManager<Class: NSObjectProtocol> {
     
-    public fileprivate(set) var type: Class.Type
+    // MARK: Class variables & properties
+    
+    // MARK: Public class methods
+    
+    // MARK: Private class methods
+    
+    // MARK: Initializers
     
     public init(type: Class.Type) {
         self.type = type
     }
+    
+    // MARK: Deinitializer
+    
+    deinit {
+    }
+    
+    // MARK: Object variables & properties
+    
+    public fileprivate(set) var type: Class.Type
+    
+    // MARK: Public object methods
+    
+    // MARK: Private object methods
+    
+    // MARK: Protocol implementation
     
 }
 
