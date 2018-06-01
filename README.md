@@ -42,7 +42,7 @@ or
 Retrieve class name:
 
 ```swift
-let classNameWithNamespace = MainViewController.hmr.fullName // "MyApplication.MainViewController"
+let classNameWithNamespace = MainViewController.hmr.fullName     // "MyApplication.MainViewController"
 let classNameWithoutNamespace = MainViewController.hmr.shortName // "MainViewController"
 ```
 
