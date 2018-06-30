@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Hammer"
-  s.version      = "1.0"
-  s.summary      = "Powerful tool for better architectures"
+  s.version      = "1.1"
+  s.summary      = "Powerful tool for managing objects"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-Provides developer with set of classes and extensions for making stable architecture.
+Provides developer with set of classes and extensions for managing objects.
                    DESC
 
   s.homepage     = "https://github.com/igormatyushkin014/Hammer"
