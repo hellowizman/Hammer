@@ -25,12 +25,17 @@ public class ObjectManager<Object: NSObjectProtocol> {
     // MARK: Deinitializer
     
     deinit {
-        print("Deinit")
     }
     
     // MARK: Object variables & properties
     
-    public fileprivate(set) var object: Object!
+    fileprivate var object: Object!
+    
+    public var `return`: Object {
+        get {
+            return self.object
+        }
+    }
     
     // MARK: Public object methods
     
@@ -46,13 +51,13 @@ public class ObjectManager<Object: NSObjectProtocol> {
 public extension ObjectManager {
     
     @discardableResult
-    public func use(closure: (_ object: Object) -> Void) -> Self {
+    public func use(_ closure: (_ object: Object) -> Void) -> Self {
         closure(self.object)
         return self
     }
     
     @discardableResult
-    public func use<NewClass: NSObjectProtocol>(as type: NewClass.Type, closure: (_ object: NewClass) -> Void) -> Self {
+    public func use<NewClass: NSObjectProtocol>(as type: NewClass.Type, _ closure: (_ object: NewClass) -> Void) -> Self {
         closure(self.object as! NewClass)
         return self
     }
@@ -65,7 +70,7 @@ public extension ObjectManager {
 public extension ObjectManager {
     
     @discardableResult
-    public func retain() -> Self {
+    public func hold() -> Self {
         Retainer.shared.retain(self.object)
         return self
     }
