@@ -78,6 +78,18 @@ Release the object:
 object.hmr.free()
 ```
 
+### Container
+
+Any object can be easily wrapped by special container:
+
+```swift
+let number: NSNumber? = nil
+
+let container = number.hmr.wrap()
+container.value // nil
+container.isNil // true
+```
+
 ### Just for Fun
 
 You can replace any usage of `hmr` with hammer emoji:
