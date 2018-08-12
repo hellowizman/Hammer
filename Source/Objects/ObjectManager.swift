@@ -92,4 +92,8 @@ public extension ObjectManager {
         return Container(value: self.object)
     }
     
+    public func array() -> [Object] {
+        return Container(value: self.object).toArray()
+    }
+    
 }
