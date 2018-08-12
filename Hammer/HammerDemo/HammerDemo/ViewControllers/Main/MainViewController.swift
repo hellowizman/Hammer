@@ -9,7 +9,7 @@
 import UIKit
 import Hammer
 
-class MainViewController: UIViewController, NullableModelHolder {
+class MainViewController: UIViewController {
     
     // MARK: Class variables & properties
     
@@ -26,26 +26,7 @@ class MainViewController: UIViewController, NullableModelHolder {
     
     // MARK: Outlets
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
     // MARK: Object variables & properties
-    
-    fileprivate var _model: String?
-    
-    var model: String? {
-        get {
-            return self._model
-        }
-        set {
-            // Save data
-            
-            self._model = newValue
-            
-            // Update title label
-            
-            self.titleLabel.text = newValue ?? ""
-        }
-    }
     
     // MARK: Public object methods
     
@@ -55,10 +36,6 @@ class MainViewController: UIViewController, NullableModelHolder {
         // Initialize navigation bar
         
         self.navigationItem.title = "Main"
-        
-        // Initialize title label
-        
-        self.titleLabel.text = ""
     }
     
     override func didReceiveMemoryWarning() {
