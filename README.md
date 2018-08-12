@@ -37,7 +37,7 @@ or
 
 ## Usage
 
-### Classes
+### Class Name
 
 Retrieve class name:
 
@@ -46,14 +46,7 @@ let classNameWithNamespace = MainViewController.hmr.fullName     // "MyApplicati
 let classNameWithoutNamespace = MainViewController.hmr.shortName // "MainViewController"
 ```
 
-Instead of `hmr`, you can also use hammer emoji:
-
-```swift
-let classNameWithNamespace = MainViewController.🔨.fullName     // "MyApplication.MainViewController"
-let classNameWithoutNamespace = MainViewController.🔨.shortName // "MainViewController"
-```
-
-### Objects
+### Object Conversions
 
 Use object in external closure:
 
@@ -71,12 +64,33 @@ let view = SomeView().hmr.use(as: UILabel.self) { (label) in
 }.object
 ```
 
-Also, you can use `🔨` as a replacement for `hmr`:
+### Object Retaining
+
+Retain any object:
 
 ```swift
+object.hmr.hold()
+```
+
+Release the object:
+
+```swift
+object.hmr.free()
+```
+
+### Just for Fun
+
+You can replace any usage of `hmr` with hammer emoji:
+
+```swift
+let classNameWithNamespace = MainViewController.🔨.fullName
+let classNameWithoutNamespace = MainViewController.🔨.shortName
+
 let view = SomeView().🔨.use(as: UILabel.self) { (label) in
     label.text = "This is a label"
 }.object
+
+// etc.
 ```
 
 ## License
