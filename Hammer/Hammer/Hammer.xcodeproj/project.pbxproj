@@ -10,8 +10,7 @@
 		6907455220C160EA008C3CD2 /* Hammer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6907455020C160EA008C3CD2 /* Hammer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6907456B20C16508008C3CD2 /* ClassManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6907456820C16508008C3CD2 /* ClassManager.swift */; };
 		6907456E20C16626008C3CD2 /* ObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6907456D20C16626008C3CD2 /* ObjectManager.swift */; };
-		692397E021202DB700A8BE51 /* NSObjectProtocolExtensionClassManagerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692397DE21202DB700A8BE51 /* NSObjectProtocolExtensionClassManagerBridge.swift */; };
-		692397E121202DB700A8BE51 /* NSObjectProtocolExtensionObjectManagerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692397DF21202DB700A8BE51 /* NSObjectProtocolExtensionObjectManagerBridge.swift */; };
+		692397E321202DEC00A8BE51 /* NSObjectProtocolExtensionBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692397E221202DEC00A8BE51 /* NSObjectProtocolExtensionBridge.swift */; };
 		696117D920E793DF00074C8C /* Retainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117D820E793DF00074C8C /* Retainer.swift */; };
 		69B38E8A211FBFA400E878EA /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B38E89211FBFA400E878EA /* Container.swift */; };
 /* End PBXBuildFile section */
@@ -22,8 +21,7 @@
 		6907455120C160EA008C3CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6907456820C16508008C3CD2 /* ClassManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassManager.swift; sourceTree = "<group>"; };
 		6907456D20C16626008C3CD2 /* ObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectManager.swift; sourceTree = "<group>"; };
-		692397DE21202DB700A8BE51 /* NSObjectProtocolExtensionClassManagerBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtensionClassManagerBridge.swift; sourceTree = "<group>"; };
-		692397DF21202DB700A8BE51 /* NSObjectProtocolExtensionObjectManagerBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtensionObjectManagerBridge.swift; sourceTree = "<group>"; };
+		692397E221202DEC00A8BE51 /* NSObjectProtocolExtensionBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtensionBridge.swift; sourceTree = "<group>"; };
 		696117D820E793DF00074C8C /* Retainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retainer.swift; sourceTree = "<group>"; };
 		69B38E89211FBFA400E878EA /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,8 +95,7 @@
 		692397DD21202DB700A8BE51 /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
-				692397DE21202DB700A8BE51 /* NSObjectProtocolExtensionClassManagerBridge.swift */,
-				692397DF21202DB700A8BE51 /* NSObjectProtocolExtensionObjectManagerBridge.swift */,
+				692397E221202DEC00A8BE51 /* NSObjectProtocolExtensionBridge.swift */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -199,8 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6907456E20C16626008C3CD2 /* ObjectManager.swift in Sources */,
-				692397E121202DB700A8BE51 /* NSObjectProtocolExtensionObjectManagerBridge.swift in Sources */,
-				692397E021202DB700A8BE51 /* NSObjectProtocolExtensionClassManagerBridge.swift in Sources */,
+				692397E321202DEC00A8BE51 /* NSObjectProtocolExtensionBridge.swift in Sources */,
 				69B38E8A211FBFA400E878EA /* Container.swift in Sources */,
 				6907456B20C16508008C3CD2 /* ClassManager.swift in Sources */,
 				696117D920E793DF00074C8C /* Retainer.swift in Sources */,
