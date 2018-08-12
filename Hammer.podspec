@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Hammer"
-  s.version      = "1.2"
+  s.version      = "1.3"
   s.summary      = "Powerful tool for managing objects"
 
   # This description is used to generate tags and improve search results.
