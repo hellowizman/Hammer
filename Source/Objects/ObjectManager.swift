@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ObjectManager<Object: NSObjectProtocol> {
+public class ObjectManager<Object: Any> {
     
     // MARK: Class variables & properties
     
@@ -65,9 +65,9 @@ public extension ObjectManager {
 }
 
 /*
- * Retains.
+ * Retaining.
  */
-public extension ObjectManager {
+public extension ObjectManager where Object == NSObjectProtocol {
     
     @discardableResult
     public func hold() -> Self {
@@ -79,6 +79,17 @@ public extension ObjectManager {
     public func free() -> Self {
         Retainer.shared.free(self.object)
         return self
+    }
+    
+}
+
+/*
+ * Container.
+ */
+public extension ObjectManager {
+    
+    public func wrap() -> Container<Object> {
+        return Container(value: self.object)
     }
     
 }
