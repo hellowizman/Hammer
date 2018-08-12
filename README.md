@@ -78,6 +78,8 @@ Release the object:
 object.hmr.free()
 ```
 
+**Important note:** retaining only works with objects that conform to `NSObjectProtocol`.
+
 ### Just for Fun
 
 You can replace any usage of `hmr` with hammer emoji:
