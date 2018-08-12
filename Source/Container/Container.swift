@@ -18,7 +18,7 @@ public class Container<Value: Any> {
     
     // MARK: Initializers
     
-    init(value: Value?) {
+    public init(value: Value?) {
         self.value = value
     }
     
@@ -31,14 +31,63 @@ public class Container<Value: Any> {
     
     public fileprivate(set) var value: Value?
     
+    // MARK: Public object methods
+    
+    // MARK: Private object methods
+    
+}
+
+/*
+ * Nil.
+ */
+public extension Container {
+    
     public var isNil: Bool {
         get {
             return self.value == nil
         }
     }
     
-    // MARK: Public object methods
+}
+
+/*
+ * Conversions.
+ */
+public extension Container {
     
-    // MARK: Private object methods
+    public func toArray() -> [Value] {
+        guard self.value != nil else {
+            return []
+        }
+        
+        return [
+            self.value!
+        ]
+    }
+    
+}
+
+/*
+ * Conditions.
+ */
+public extension Container {
+    
+    @discardableResult
+    public func ifNotNil(_ closure: (_ value: Value) -> Void) -> Self {
+        if self.value != nil {
+            closure(self.value!)
+        }
+        
+        return self
+    }
+    
+    @discardableResult
+    public func ifNil(_ closure: () -> Void) -> Self {
+        if self.value == nil {
+            closure()
+        }
+        
+        return self
+    }
     
 }
