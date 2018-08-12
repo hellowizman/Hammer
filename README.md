@@ -78,7 +78,17 @@ Release the object:
 object.hmr.free()
 ```
 
-**Important note:** retaining only works with objects that conform to `NSObjectProtocol`.
+### Container
+
+Any object can be easily wrapped by special container:
+
+```swift
+let number: NSNumber? = nil
+
+let container = number.hmr.wrap()
+container.value // nil
+container.isNil // true
+```
 
 ### Just for Fun
 
