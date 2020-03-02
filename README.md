@@ -92,7 +92,7 @@ container.isNil // true
 
 ### Just for Fun
 
-You can replace any usage of `hmr` with hammer emoji:
+You can replace `hmr` with hammer emoji:
 
 ```swift
 let classNameWithNamespace = MainViewController.🔨.fullName
